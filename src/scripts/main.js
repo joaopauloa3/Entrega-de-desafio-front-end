@@ -43,7 +43,8 @@ $(function() {
     initializeZipCodeSearch()
     handleFiles()
     handleProducts()
-    elements.buttons.btnSaveForm.click(function () {
+    elements.buttons.btnSaveForm.click(function (e) {
+        e.preventDefault()
         if (SupplierCheckDatas() && productsCheckDatas() && filesCheckDatas()) {
             console.log(buildJson());
             return
@@ -53,6 +54,7 @@ $(function() {
     
 
 })
+
 
 
 
