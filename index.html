@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CADASTRO FORNECEDOR/PRODUTO</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+    <link rel="stylesheet" href="./src/styles/fluig-style-guide.min.css">
+    <link rel="stylesheet" href="./src/styles/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <script src="./src/scripts/jquery.js" preload></script>
+    <script src="./src/scripts/jquery.js" preload></script>
+
+</head>
+<body>
+    <div class="fluig-style-guide">
+        
+        <div class="container-toasts overflow-auto">
+        </div>
+
+        <form id="form" class=" container fs-display-flex fs-md-gap-vertical flex-column gap-3" role="form">
+
+
+            <div class="row  border border-dark fs-border-radius">
+                <h3 class="col-sm-12 text-white py-2 bg-info m-0">Dados do fornecedor</h3>
+
+                <div class="form-group col-sm-8">
+                    <label for="razao-social">Razão social</label>
+                    <input required="required" type="text" class="form-control" id="razao-social">
+                </div>
+                <div class="form-group col-sm-4">
+                    <label for="cnpj">CNPJ</label>
+                    <input required="required" type="number" class="form-control" id="cnpj">
+                </div>
+
+
+                <div class="form-group col-sm-8">
+                    <label for="nome-fantasia">Nome Fantasia</label>
+                    <input required="required" type="text" class="form-control" id="nome-fantasia">
+                </div>
+                <div class="form-group col-sm-4">
+                    <label for="ie">Inscrição Estadual</label>
+                    <input type="number" class="form-control" id="ie">
+                </div>
+
+
+                <div class="form-group col-sm-4">
+                    <label for="zip-code">CEP</label>
+                    <input required="required" type="number" class="form-control" id="zip-code">
+                </div>
+                <div class="form-group col-sm-4 col-sm-offset-4">
+                    <label for="im">Inscrição municipal</label>
+                    <input type="number" class="form-control" id="im">
+                </div>
+
+
+                <div class="form-group col-sm-8">
+                    <label for="address">Endereço</label>
+                    <input required="required" type="text" class="form-control" id="address">
+                </div>
+                <div class="form-group col-sm-4">
+                    <label for="number-local">Número</label>
+                    <input required="required" type="number" class="form-control" id="number-local">
+                </div>
+
+
+                <div class="form-group col-sm-4">
+                    <label for="district">Bairro</label>
+                    <input required="required" type="text" class="form-control" id="district">
+                </div>
+                <div class="form-group col-sm-4">
+                    <label for="city">Município</label>
+                    <input required="required" type="text" class="form-control" id="city">
+                </div>
+                <div class="form-group col-sm-4">
+                    <label for="state">Estado</label>
+                    <input required="required" type="text" class="form-control" id="state">
+                </div>
+
+
+                <div class="form-group col-sm-6">
+                    <label for="name-people-contact">Nome da pessoa de contato</label>
+                    <input required="required" type="text" class="form-control" id="name-people-contact">
+                </div>
+                <div class="form-group col-sm-3">
+                    <label for="phone">Telefone</label>
+                    <input required="required" type="number" class="form-control" id="phone">
+                </div>
+                <div class="form-group col-sm-3">
+                    <label for="email">E-mail</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+            </div>
+
+
+            <div class="row border border-dark fs-border-radius fs-justify-content-center pt-0 pb-3">
+                <table class="table">
+                    <colgroup>
+                        <col style="width: auto;">
+                        <col style="width: 100%">
+                    </colgroup>
+                    <thead class="text-white bg-info m-0">
+                        <th scope="col"><h3 class="text-white bg-info m-0">Produtos</h3></th>
+                        <th scope="col"></th>
+                    </thead>
+                    <tbody id="table-products-body">
+                        <!-- <tr>
+                            <td  class="cursor-pointer fs-width-50 align-middle"><img style="width: 40px;" class="fs-border-radius bg-danger p-2" src="./src/assets/icons/fluigicon-trash.png"></td>
+                            <td>
+                                <fieldset class="fs-border-radius align-items-center fs-display-flex border border-dark p-2">
+                                    <legend class="w-auto border-0 px-3">Produto - 1</legend>
+                                    <div class="container-icon rounded-circle p-2">
+                                        <i class="text-white ph ph-package"></i>
+                                    </div>
+                                    <div>
+                                        <div class="form-group col-sm-12">
+                                            <label for="product-name">Produto</label>
+                                            <input required="required" type="text" class="form-control" id="product-name">
+                                        </div>
+                                        <div class="form-group col-sm-3">
+                                            <label for="unit-of-measure">UND. medida</label>
+                                            <select required="required" class="form-control" id="unit-of-measure">
+                                                <option value=""></option>
+                                                <option value="un">Unidade (un)</option>
+                                                <option value="pc">Peça (pç)</option>
+                                                <option value="kg">Quilograma (kg)</option>
+                                                <option value="l">Litro (L)</option>
+                                                <option value="cx">Caixa (cx)</option>
+                                                <option value="pct">Pacote (pct)</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-sm-3">
+                                            <label for="current-stock">QTD. estoque</label>
+                                            <input required="required" type="number" step="0.01" class="form-control" id="current-stock">
+                                        </div>
+                                        <div class="form-group col-sm-3">
+                                            <label for="unit-value">Valor unitário</label>
+                                            <input required="required"  type="number" step="0.01" class="form-control" id="unit-value">
+                                        </div>
+                                        <div class="form-group col-sm-3">
+                                            <label for="total-value">Valor total</label>
+                                            <input required="required"  type="number" step="0.01" class="form-control bg-secondary text-white" readonly id="total-value">
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+                <button id="add-product" class="col-sm-11 px-4 bg-success text-white border-0 fs-border-radius py-2">Adicionar produto</button>
+            </div>
+
+
+            <div class="row border border-dark fs-border-radius fs-justify-content-center pt-0 pb-3">
+                <h3 class="col-sm-12 text-white py-2 bg-info m-0">Anexos</h3>
+                <fieldset class="fs-border-radius table col-sm-11 align-items-center fs-display-flex border border-dark py-2">
+                    <legend class="w-auto border-0 px-3">Itens</legend>
+                    
+                    <table class="table col-sm-12">
+                        <colgroup>
+                            <col style="width: auto;">
+                            <col style="width: auto">
+                            <col style="width: 100%">
+                        </colgroup>
+                        <thead class="m-0">
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                        </thead>
+                        <tbody id="table-files-body">
+                            <!-- <tr>
+                                <td class="cursor-pointer fs-width-50 align-middle"><img  style="width: 40px;" class="remove-file fs-border-radius bg-danger p-2" src="./src/assets/icons/fluigicon-trash.png"></td>
+                                <td  class="cursor-pointer fs-width-50 align-middle"><img style="width: 40px;" class="fs-border-radius bg-info p-2" src="./src/assets/icons/fluigicon-eye-open.png"></td>
+                                <td class="align-middle"><h3>Documento anexo 1</h3></td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </fieldset>
+                <button id="add-file" class="col-sm-11 px-4 bg-success text-white border-0 fs-border-radius py-2">Incluir anexo</button>
+                <input type="file" class="d-none" name="add-file" id="file">
+            </div>
+
+            <button id="save" class="col-sm-12 px-4 bg-success text-white border-0 fs-border-radius py-2">Salvar fornecedor</button>
+
+        </form>
+    </div>
+    
+    <script type="module" src="./src/scripts/main.js" preload></script>
+</body>
+</html>
+
+
+                
+
+
+
+
+
+
+<!-- <div class="form-group">
+    <label for="exampleInputFile">File input</label>
+    <input type="file" id="exampleInputFile">
+    <p class="help-block">Example block-level help text here.</p>
+</div>
+<div class="checkbox">
+    <label>
+    <input type="checkbox"> Check me out
+    </label>
+</div> -->

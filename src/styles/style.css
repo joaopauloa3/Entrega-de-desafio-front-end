@@ -1,0 +1,42 @@
+.container-icon {
+    background-color: #7987d3ff;
+}
+
+.ph-package {
+  font-size: clamp(10px, 32px + 2vw, 64px);
+}
+
+.fs-64-clamp {
+  font-size: clamp(32px, 48px + 1vw, 64px);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+
+
+/*Toast styles*/
+.container-toasts {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  z-index: 999;
+}
+
+.disappear {
+  animation: disappear 4s forwards;
+}
+
+@keyframes disappear {
+  from {
+    display: block;
+  }
+  to {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  
+}
