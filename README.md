@@ -28,5 +28,7 @@ Interface front-end para cadastro de fornecedores, com funcionalidades avançada
 ## Como Executar
 
 Clone este repositório.
+
 Abra o arquivo index.html em seu navegador.
+
 Nota: Dependendo do navegador (ex: Google Chrome), módulos JavaScript (import/export) podem ser bloqueados por segurança. Se ocorrer um erro de CORS no console, a solução é abrir o projeto usando um servidor local (como a extensão Live Server do VS Code).
